@@ -1,5 +1,7 @@
 package ru.TestsProject;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.TmsLink;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
@@ -21,12 +23,14 @@ public class FirstTest {
     }
 
     @Test(priority = 1)
+    @Description("Test-case-1")
     public void Test1() {
         String title = wd.getTitle();
         Assert.assertTrue(title.equals("Delivery Club — Доставка еды из ресторанов от 25 минут!"));
     }
 
     @Test(priority = 2)
+    @Description("Test-case-2")
     public void Test2() {
         throw new SkipException("Skipping this Test");
     }
